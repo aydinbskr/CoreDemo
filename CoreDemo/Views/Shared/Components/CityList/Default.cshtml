@@ -1,0 +1,15 @@
+﻿@model IEnumerable<string>
+
+<div class="form-group col-md-6">
+    <label for="exampleFormControlSelect2 mb-2">Şehir Seçiniz</label>
+    <select class="form-control" id="exampleFormControlSelect2">
+        @foreach (var item in Model)
+        {
+            <option>@item</option>
+
+        }
+
+
+
+    </select>
+</div>
