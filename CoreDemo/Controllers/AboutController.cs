@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace CoreDemo.Controllers
     public class AboutController : Controller
     {
         AboutManager abm = new AboutManager(new EfAboutRepository());
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
