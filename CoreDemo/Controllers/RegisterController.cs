@@ -29,7 +29,7 @@ namespace CoreDemo.Controllers
             {
                 w.WriterStatus = true;
                 w.WriterAbout = "Deneme test";
-                wm.WriterAdd(w);
+                wm.Add(w);
                 return RedirectToAction("Index", "Blog");
             }
             else
